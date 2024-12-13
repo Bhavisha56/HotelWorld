@@ -3,6 +3,7 @@ import rooms1 from '../assets/img6.jpg'
 import Navbar from './Navbar'
 import { CartContext } from '../CartContext'; // Import the context
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const { cart,removeFromCart } = useContext(CartContext); // Access cart from context
@@ -96,7 +97,7 @@ const Cart = () => {
                             <div className="w-1/6"></div>
                             <div className="w-1/6"></div>
                             <div className="w-1/6">${calculateTotal()}</div>
-                            <div className="w-1/6 active:scale-90 cursor-pointer bg-red-500 rounded-lg text-center">Click to make Payment</div>
+                            <div className="w-1/6 active:scale-90 cursor-pointer bg-red-500 rounded-lg text-center"><Link to="/payment">Click to make Payment</Link></div>
                         </div>
                     </>
                 ) : (
